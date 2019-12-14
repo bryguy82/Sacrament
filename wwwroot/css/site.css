@@ -69,3 +69,65 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+/*  Custom Styles
+-------------------------------------------------- */
+
+.navbar {
+    background-color: #312926;
+}
+
+.RowMobileCol, .Row {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.sacrament-bg {
+    flex: 3;
+
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #312926;
+    justify-content: space-around;
+}
+
+.link-button {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    background-color:#fff;
+    border-radius: 3px;
+    color:#111;
+    text-decoration: none;
+    margin: auto;
+    width: 200px;
+    max-width: 90%;
+}
+
+.link-button:hover {
+    background-color: #ededed;
+    color: #111;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .RowMobileCol {
+      flex-direction: column;
+      height: 400px;
+  }
+  .sacrament-bg {
+    flex: 1;
+  }
+}
+/*
+        background-image: url("../images/sacrament.jpeg");
+    background-repeat: no-repeat;
+    height: 363px;
+    width: 100%;
+*/

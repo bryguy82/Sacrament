@@ -66,10 +66,6 @@ else
     <a asp-action="Create">Create New Program</a> |
     <a asp-action="Index">List of Programs</a>
 </div>
-<div class="noprint">
-    <a asp-controller="Speakers" asp-action="Create" asp-route-id="@Model.ID">Add a speaker</a> |
-    <a asp-controller="Hymns" asp-action="Create" asp-route-id="@Model.ID">Add a hymn</a>
-</div>
 <input type="button" id="printer" class="noprint" onclick="Printalot()" value="Print"/>
 <script type="text/javascript">
     function Printalot() {

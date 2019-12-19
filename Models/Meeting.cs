@@ -9,6 +9,7 @@ namespace Sacrament.Models
 {
     public class Meeting
     {
+        public Meeting() { }
 
         public int ID { get; set; }
 
@@ -37,12 +38,91 @@ namespace Sacrament.Models
         [StringLength(50)]
         public string ClosingPrayer { get; set; }
 
-        public Hymn hymn { get; set; }
+        /*MEETING HYMNS*/
+        [Required]
+        [Display(Name = "Page")]
+        public int Hymn_1Num { get; set; }
 
-        public ICollection<Hymn> Hymns { get; set; }
+        [Required]
+        [Display(Name = "Opening Hymn")]
+        [StringLength(50)]
+        public string Hymn_1 { get; set; }
 
-        public Speaker speaker { get; set; }
+        [Required]
+        [Display(Name = "Page")]
+        public int Hymn_2Num { get; set; }
 
-        public ICollection<Speaker> Speakers { get; set; }
+        [Required]
+        [Display(Name = "Sacrament Hymn")]
+        [StringLength(50)]
+        public string Hymn_2 { get; set; }
+
+        // Not required
+        [Display(Name = "Page")]
+        public int Hymn_3Num { get; set; }
+
+        // Not required
+        [Display(Name = "Special Musical Number")]
+        [StringLength(50)]
+        public string Hymn_3 { get; set; }
+
+        [Required]
+        [Display(Name = "Page")]
+        public int Hymn_4Num { get; set; }
+
+        [Required]
+        [Display(Name = "Closing Hymn")]
+        [StringLength(50)]
+        public string Hymn_4 { get; set; }
+
+        /*MEETING SPEAKERS*/
+        [Display(Name = "1st Speaker: First Name")]
+        [StringLength(50)]
+        public string FirstName_1 { get; set; }
+
+        [Display(Name = "1st Speaker: Last Name")]
+        [StringLength(50)]
+        public string LastName_1 { get; set; }
+
+        [Display(Name = "1st Speaker: Topic")]
+        [StringLength(50)]
+        public string Topic_1 { get; set; }
+
+        [Display(Name = "2nd Speaker: First Name")]
+        [StringLength(50)]
+        public string FirstName_2 { get; set; }
+
+        [Display(Name = "2nd Speaker: Last Name")]
+        [StringLength(50)]
+        public string LastName_2 { get; set; }
+
+        [Display(Name = "2nd Speaker: Topic")]
+        [StringLength(50)]
+        public string Topic_2 { get; set; }
+
+        [Display(Name = "3rd Speaker: First Name")]
+        [StringLength(50)]
+        public string FirstName_3 { get; set; }
+
+        [Display(Name = "3rd Speaker: Last Name")]
+        [StringLength(50)]
+        public string LastName_3 { get; set; }
+
+        [Display(Name = "3rd Speaker: Topic")]
+        [StringLength(50)]
+        public string Topic_3 { get; set; }
+
+        [Display(Name = "4th Speaker: First Name")]
+        [StringLength(50)]
+        public string FirstName_4 { get; set; }
+
+        [Display(Name = "4th Speaker: Last Name")]
+        [StringLength(50)]
+        public string LastName_4 { get; set; }
+
+        [Display(Name = "4th Speaker: Topic")]
+        [StringLength(50)]
+        public string Topic_4 { get; set; }
+
     }
 }

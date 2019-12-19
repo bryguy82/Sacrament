@@ -16,10 +16,5 @@ namespace Sacrament.Models
 
         public DbSet<Sacrament.Models.Meeting> Meeting { get; set; }
 
-        public DbSet<Sacrament.Models.Hymn> Hymn { get; set; }
-
-        public DbSet<Sacrament.Models.Speaker> Speaker { get; set; }
-
-        public DbSet<Sacrament.Models.Topic> Topic { get; set; }
     }
 }

@@ -45,6 +45,25 @@ namespace Sacrament.Controllers
         // GET: Meetings/Create
         public IActionResult Create()
         {
+            List<SelectListItem> hymn_list = new List<SelectListItem>()
+            {
+                new SelectListItem { Text = "High on the Mountain Top", Value = "5" },
+                new SelectListItem { Text = "I Saw a Mighty Angel Fly", Value = "15" },
+                new SelectListItem { Text = "We Thank Thee, O God, for a Prophet", Value = "19" },
+                new SelectListItem { Text = "Christ the Lord Is Risen Today", Value = "200" },
+            };
+
+            List<SelectListItem> topic_list = new List<SelectListItem>()
+            {
+                new SelectListItem { Text = "Faith" },
+                new SelectListItem { Text = "Repentance" },
+                new SelectListItem { Text = "Holy Ghost" },
+                new SelectListItem { Text = "Baptism" },
+            };
+
+            ViewBag.Hymns = hymn_list;
+            ViewBag.Topics = topic_list;
+
             return View();
         }
 
@@ -53,7 +72,7 @@ namespace Sacrament.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Preside,Conduct,MeetingDate,OpeningPrayer,ClosingPrayer")] Meeting meeting)
+        public async Task<IActionResult> Create([Bind("ID,Preside,Conduct,MeetingDate,OpeningPrayer,ClosingPrayer,Hymn_1Num,Hymn_1,Hymn_2Num,Hymn_2,Hymn_3Num,Hymn_3,Hymn_4Num,Hymn_4,FirstName_1,LastName_1,FirstName_2,LastName_2,FirstName_3,LastName_3,FirstName_4,LastName_4,Topic_1,Topic_2,Topic_3,Topic_4")] Meeting meeting)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +104,7 @@ namespace Sacrament.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Preside,Conduct,MeetingDate,OpeningPrayer,ClosingPrayer")] Meeting meeting)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Preside,Conduct,MeetingDate,OpeningPrayer,ClosingPrayer,Hymn_1Num,Hymn_1,Hymn_2Num,Hymn_2,Hymn_3Num,Hymn_3,Hymn_4Num,Hymn_4,FirstName_1,LastName_1,FirstName_2,LastName_2,FirstName_3,LastName_3,FirstName_4,LastName_4,Topic_1,Topic_2,Topic_3,Topic_4")] Meeting meeting)
         {
             if (id != meeting.ID)
             {

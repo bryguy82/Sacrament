@@ -9,6 +9,10 @@
     <Compile Remove="Migrations\20191213040459_initial-migration.Designer.cs" />
     <Compile Remove="Migrations\20191213041915_initial-migration.cs" />
     <Compile Remove="Migrations\20191213041915_initial-migration.Designer.cs" />
+    <Compile Remove="Migrations\20191213052610_initial-migration.cs" />
+    <Compile Remove="Migrations\20191213052610_initial-migration.Designer.cs" />
+    <Compile Remove="Migrations\20191213055508_multiple-speakers-hymn-numbers.cs" />
+    <Compile Remove="Migrations\20191213055508_multiple-speakers-hymn-numbers.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

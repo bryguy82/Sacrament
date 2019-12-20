@@ -14,29 +14,129 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
             <div class="form-group">
-                <label asp-for="Preside" class="control-label"></label>
+                <label asp-for="Preside" class="control-label"></label><span> *</span>
                 <input asp-for="Preside" class="form-control" />
                 <span asp-validation-for="Preside" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Conduct" class="control-label"></label>
+                <label asp-for="Conduct" class="control-label"></label><span> *</span>
                 <input asp-for="Conduct" class="form-control" />
                 <span asp-validation-for="Conduct" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MeetingDate" class="control-label"></label>
+                <label asp-for="MeetingDate" class="control-label"></label><span> *</span>
                 <input asp-for="MeetingDate" class="form-control" />
                 <span asp-validation-for="MeetingDate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="OpeningPrayer" class="control-label"></label>
+                <label asp-for="OpeningPrayer" class="control-label"></label><span> *</span>
                 <input asp-for="OpeningPrayer" class="form-control" />
                 <span asp-validation-for="OpeningPrayer" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ClosingPrayer" class="control-label"></label>
+                <label asp-for="ClosingPrayer" class="control-label"></label><span> *</span>
                 <input asp-for="ClosingPrayer" class="form-control" />
                 <span asp-validation-for="ClosingPrayer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hymn_1Num" class="control-label"></label><span> *</span>
+                <input asp-for="Hymn_1Num" class="form-control" readonly />
+                <span asp-validation-for="Hymn_1Num" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hymn_1" class="control-label"></label><span> *</span>
+                @Html.DropDownList("Hymn_1", (IEnumerable<SelectListItem>)ViewBag.Hymns, "Please Select", new { id = "Hymn_1", @class = "form-control", @oninput = "adjVal1(this.value)", @onchange = "adjVal1(this.value)" })
+                <span asp-validation-for="Hymn_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hymn_2Num" class="control-label"></label><span> *</span>
+                <input asp-for="Hymn_2Num" class="form-control" readonly />
+                <span asp-validation-for="Hymn_2Num" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hymn_2" class="control-label"></label><span> *</span>
+                @Html.DropDownList("Hymn_2", (IEnumerable<SelectListItem>)ViewBag.Hymns, "Please Select", new { id = "Hymn_2", @class = "form-control", @oninput = "adjVal1(this.value)", @onchange = "adjVal1(this.value)" })
+                <span asp-validation-for="Hymn_2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hymn_3Num" class="control-label"></label>
+                <input asp-for="Hymn_3Num" class="form-control" readonly />
+                <span asp-validation-for="Hymn_3Num" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hymn_3" class="control-label"></label>
+                @Html.DropDownList("Hymn_3", (IEnumerable<SelectListItem>)ViewBag.Hymns, "Please Select", new { id = "Hymn_3", @class = "form-control", @oninput = "adjVal1(this.value)", @onchange = "adjVal1(this.value)" })
+                <span asp-validation-for="Hymn_3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hymn_4Num" class="control-label"></label><span> *</span>
+                <input asp-for="Hymn_4Num" class="form-control" readonly />
+                <span asp-validation-for="Hymn_4Num" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hymn_4" class="control-label"></label><span> *</span>
+                @Html.DropDownList("Hymn_4", (IEnumerable<SelectListItem>)ViewBag.Hymns, "Please Select", new { id = "Hymn_4", @class = "form-control", @oninput = "adjVal1(this.value)", @onchange = "adjVal1(this.value)" })
+                <span asp-validation-for="Hymn_4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName_1" class="control-label"></label>
+                <input asp-for="FirstName_1" class="form-control" />
+                <span asp-validation-for="FirstName_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName_1" class="control-label"></label>
+                <input asp-for="LastName_1" class="form-control" />
+                <span asp-validation-for="LastName_1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Topic_1" class="control-label"></label>
+                @Html.DropDownList("Topic_1", (IEnumerable<SelectListItem>)ViewBag.Topics, "Please Select", new { id = "Topic_1", @class = "form-control" })
+                <span asp-validation-for="Topic_4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName_2" class="control-label"></label>
+                <input asp-for="FirstName_2" class="form-control" />
+                <span asp-validation-for="FirstName_2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName_2" class="control-label"></label>
+                <input asp-for="LastName_2" class="form-control" />
+                <span asp-validation-for="LastName_2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Topic_2" class="control-label"></label>
+                @Html.DropDownList("Topic_2", (IEnumerable<SelectListItem>)ViewBag.Topics, "Please Select", new { id = "Topic_2", @class = "form-control" })
+                <span asp-validation-for="Topic_4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName_3" class="control-label"></label>
+                <input asp-for="FirstName_3" class="form-control" />
+                <span asp-validation-for="FirstName_3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName_3" class="control-label"></label>
+                <input asp-for="LastName_3" class="form-control" />
+                <span asp-validation-for="LastName_3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Topic_3" class="control-label"></label>
+                @Html.DropDownList("Topic_3", (IEnumerable<SelectListItem>)ViewBag.Topics, "Please Select", new { id = "Topic_3", @class = "form-control" })
+                <span asp-validation-for="Topic_4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName_4" class="control-label"></label>
+                <input asp-for="FirstName_4" class="form-control" />
+                <span asp-validation-for="FirstName_4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName_4" class="control-label"></label>
+                <input asp-for="LastName_4" class="form-control" />
+                <span asp-validation-for="LastName_4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Topic_4" class="control-label"></label>
+                @Html.DropDownList("Topic_4", (IEnumerable<SelectListItem>)ViewBag.Topics, "Please Select", new { id = "Topic_4", @class = "form-control" })
+                <span asp-validation-for="Topic_4" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

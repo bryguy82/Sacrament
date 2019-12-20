@@ -40,7 +40,7 @@ namespace Sacrament.Models
 
         /*MEETING HYMNS*/
         [Required]
-        [Display(Name = "Page")]
+        [Display(Name = "Opening Hymn Page #")]
         public int Hymn_1Num { get; set; }
 
         [Required]
@@ -49,7 +49,7 @@ namespace Sacrament.Models
         public string Hymn_1 { get; set; }
 
         [Required]
-        [Display(Name = "Page")]
+        [Display(Name = "Sacrament Hymn Page #")]
         public int Hymn_2Num { get; set; }
 
         [Required]
@@ -67,7 +67,7 @@ namespace Sacrament.Models
         public string Hymn_3 { get; set; }
 
         [Required]
-        [Display(Name = "Page")]
+        [Display(Name = "Closing Hymn Page #")]
         public int Hymn_4Num { get; set; }
 
         [Required]

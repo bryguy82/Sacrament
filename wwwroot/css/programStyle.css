@@ -21,3 +21,8 @@ dt {
 dd {
     text-align: right;
 }
+
+.centered {
+    width: 100%;
+    text-align: center;
+}

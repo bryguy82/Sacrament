@@ -40,7 +40,7 @@ namespace Sacrament.Models
 
         /*MEETING HYMNS*/
         [Required]
-        [Display(Name = "Opening Hymn Page #")]
+        [Display(Name = "Page #")]
         public int Hymn_1Num { get; set; }
 
         [Required]
@@ -49,7 +49,7 @@ namespace Sacrament.Models
         public string Hymn_1 { get; set; }
 
         [Required]
-        [Display(Name = "Sacrament Hymn Page #")]
+        [Display(Name = "Page #")]
         public int Hymn_2Num { get; set; }
 
         [Required]
@@ -58,7 +58,7 @@ namespace Sacrament.Models
         public string Hymn_2 { get; set; }
 
         // Not required
-        [Display(Name = "Page")]
+        [Display(Name = "Page #")]
         public int Hymn_3Num { get; set; }
 
         // Not required
@@ -67,7 +67,7 @@ namespace Sacrament.Models
         public string Hymn_3 { get; set; }
 
         [Required]
-        [Display(Name = "Closing Hymn Page #")]
+        [Display(Name = "Page #")]
         public int Hymn_4Num { get; set; }
 
         [Required]
@@ -76,7 +76,7 @@ namespace Sacrament.Models
         public string Hymn_4 { get; set; }
 
         /*MEETING SPEAKERS*/
-        [Display(Name = "1st Speaker: First Name")]
+        [Display(Name = "1st Speaker:")]
         [StringLength(50)]
         public string FirstName_1 { get; set; }
 
@@ -84,11 +84,11 @@ namespace Sacrament.Models
         [StringLength(50)]
         public string LastName_1 { get; set; }
 
-        [Display(Name = "1st Speaker: Topic")]
+        [Display(Name = "Topic")]
         [StringLength(50)]
         public string Topic_1 { get; set; }
 
-        [Display(Name = "2nd Speaker: First Name")]
+        [Display(Name = "2nd Speaker:")]
         [StringLength(50)]
         public string FirstName_2 { get; set; }
 
@@ -96,11 +96,11 @@ namespace Sacrament.Models
         [StringLength(50)]
         public string LastName_2 { get; set; }
 
-        [Display(Name = "2nd Speaker: Topic")]
+        [Display(Name = "Topic")]
         [StringLength(50)]
         public string Topic_2 { get; set; }
 
-        [Display(Name = "3rd Speaker: First Name")]
+        [Display(Name = "3rd Speaker:")]
         [StringLength(50)]
         public string FirstName_3 { get; set; }
 
@@ -108,11 +108,11 @@ namespace Sacrament.Models
         [StringLength(50)]
         public string LastName_3 { get; set; }
 
-        [Display(Name = "3rd Speaker: Topic")]
+        [Display(Name = "Topic")]
         [StringLength(50)]
         public string Topic_3 { get; set; }
 
-        [Display(Name = "4th Speaker: First Name")]
+        [Display(Name = "4th Speaker:")]
         [StringLength(50)]
         public string FirstName_4 { get; set; }
 
@@ -120,7 +120,7 @@ namespace Sacrament.Models
         [StringLength(50)]
         public string LastName_4 { get; set; }
 
-        [Display(Name = "4th Speaker: Topic")]
+        [Display(Name = "Topic")]
         [StringLength(50)]
         public string Topic_4 { get; set; }
 

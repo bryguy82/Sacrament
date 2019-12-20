@@ -29,7 +29,18 @@ namespace Sacrament.Controllers
         {
             if (id == null)
             {
-                return NotFound();
+                var latest = _context.Meeting
+                    .OrderByDescending(m => m.ID)
+                    .FirstOrDefault();
+
+                if (latest == null)
+                {
+                    return View("Create");
+                }
+                else
+                {
+                    return View(latest);
+                }
             }
 
             var meeting = await _context.Meeting

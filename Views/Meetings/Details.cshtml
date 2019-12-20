@@ -1,48 +1,81 @@
 ﻿@model Sacrament.Models.Meeting
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Program Details for " + Model.MeetingDate;
 }
 
-<h1>Details</h1>
+<head>
+    <link rel="stylesheet" href="~/css/programStyle.css" />
+</head>
+@if (Model.MeetingDate == DateTime.Today.AddDays(7 - (int)DateTime.Today.DayOfWeek))
+{
+    <h1 class="noprint">This Week's Meeting</h1>
+}
+else
+{
+    <h1 class="noprint">Program for @Html.DisplayFor(model => model.MeetingDate)</h1>
+}
 
-<div>
-    <h4>Meeting</h4>
+<div id="programcontainer">
+<div class="program" id="program">
+    <h4>Angeles Ward</h4>
+    <h4>@Html.DisplayFor(model=>model.MeetingDate)</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Preside)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Preside)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Conduct)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Conduct)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.MeetingDate)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.MeetingDate)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.OpeningPrayer)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.OpeningPrayer)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.ClosingPrayer)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.ClosingPrayer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Speakers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Speakers)
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
 </div>
+<div class="noprint">
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit Program</a> |
+    <a asp-action="Create">Create New Program</a> |
+    <a asp-action="Index">List of Programs</a>
+</div>
+<input type="button" id="printer" class="noprint" onclick="Printalot()" value="Print"/>
+<script type="text/javascript">
+    function Printalot() {
+        var nonprint = document.getElementsByClassName('noprint');
+        for (var i = 0; i < nonprint.length; i++) {
+            nonprint[i].style.display = 'none';
+        }
+        window.print();
+        for (var i = 0; i < nonprint.length; i++) {
+            nonprint[i].style.display = '';
+        }
+    }   
+</script>

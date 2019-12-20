@@ -35,6 +35,9 @@ namespace Sacrament.Controllers
 
                 if (latest == null)
                 {
+                    
+                    ViewBag.Hymns = getHymnList();
+                    ViewBag.Topics = getTopicList();
                     return View("Create");
                 }
                 else
@@ -97,6 +100,7 @@ namespace Sacrament.Controllers
         public IActionResult Create()
         {
 
+            ViewBag.Pants = "These pants";
             ViewBag.Hymns = getHymnList();
             ViewBag.Topics = getTopicList();
 
